@@ -1,0 +1,418 @@
+@import '~antd/dist/reset.css';
+@import '../base/_color.scss';
+
+.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
+  box-shadow: none;
+}
+
+
+
+.ant-menu::-webkit-scrollbar,
+.ant-table-container .ant-table-body::-webkit-scrollbar {
+  width: 5px; 
+  height: 6px;
+}
+.ant-table-container .ant-table-body::-webkit-scrollbar-track {
+  background: white !important;
+}
+.ant-menu::-webkit-scrollbar-track{
+  background: white;
+}
+.short-check > span {
+display: flex !important;
+align-self: center !important;
+padding-top: 0px !important;
+font-size: 15px;
+font-weight: 500;
+}
+
+.ant-pagination {
+margin-block: 8px !important;
+}
+.ant-menu::-webkit-scrollbar-thumb,
+.ant-table-container .ant-table-body::-webkit-scrollbar-thumb {
+  background-color: #b0b8c1; 
+  border-radius: 10px; 
+  border: none; 
+}
+
+#filterDiv > .ant-input-wrapper {
+  font-size: 14px !important;
+}
+
+.ant-drawer-panel-motion-right-leave-action {
+  box-shadow: none;
+}
+
+.ant-layout-header > .ant-btn-text:hover {
+  background-color: transparent !important;
+}
+
+.iao-textarea:focus,
+.iao-textarea:hover {
+  border-color:#009a3d !important;
+}
+.ant-drawer-wrapper-body > .ant-drawer-body {
+  padding-bottom: 8px !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.ant-table-thead .ant-table-cell {
+  font-weight: 600 !important;
+  font-size:  13px !important;
+  padding-inline: 12px !important;
+}
+
+.ant-table-tbody > .ant-table-row > .ant-table-cell {
+  border-right: 1px solid #f0f0f0 !important;
+  font-size:  13px !important;
+  padding-inline: 12px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  height: 36px !important;
+}
+
+
+.factng-select > .ant-select-selector, .factng-select > .ant-select-selector > .ant-select-selection-placeholder {
+  color: #727678 !important;
+  font-size: 18px !important;
+}
+
+.factng-select > .ant-select-item-option-content {
+  align-items: center;
+}
+
+.factng-select > .ant-select-arrow {
+  color: #009a3d !important;
+}
+
+.tb {
+  border: 1px solid crimson;
+}
+
+.ant-radio-inner {
+  border: 1px solid $primary !important;
+}
+
+.ant-radio-disabled > .ant-radio-inner {
+  border: 1px solid $primary !important;
+}
+
+.ant-checkbox-inner {
+  border: 1px solid $primary !important;
+}
+
+.ant-checkbox-disabled > .ant-checkbox-inner {
+  border: 1px solid #d9d9d9 !important;
+}
+
+.ant-input:focus,
+.ant-input:focus-within {
+  box-shadow: none;
+}
+
+.iao-search-input > .ant-input {
+  font-weight: 500 !important;
+
+}
+
+.iao-search-input > .ant-input::placeholder {
+  color: #009a3d !important;
+}
+
+#userPhone::placeholder, #userEmail::placeholder {
+  color: #2b2d2f !important;
+}
+
+
+.iao-table-cell-color-1 {
+  //background: #eeeeee !important;
+}
+
+.iao-table-cell-color-1 > td.ant-table-cell-row-hover {
+  background: $primary !important;
+}
+
+.iao-table-cell-color-fast > td.ant-table-cell {
+  color: rgb(244 63 94) !important;
+}
+
+.iao-select > .ant-select-selector {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-right-width: 0 !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+  padding: 8px !important;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header > {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.iao-collapse > .ant-collapse-item > .ant-collapse-header {
+  align-items: center !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+
+}
+
+.iao-collapse-issue > .ant-collapse-item > .ant-collapse-header {
+  align-items: center !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+
+}
+
+.ant-checkbox {
+  align-self: flex-start !important;
+  padding-top: 4px !important;
+}
+
+.ant-checkbox-wrapper.small-check > span {
+  padding-top: 4px !important;
+}
+
+.iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
+  padding-inline-end: 4px !important;
+
+}
+
+.iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
+  font-size: 18px ! important;
+}
+
+.iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
+  padding-inline-end: 4px !important;
+
+}
+
+.iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
+  font-size: 15px ! important;
+}
+
+// faq collapse
+// 나중에 정리할 것임 주석삭제 절대 NO :)
+.iao-faq-collapse {
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-radius: 0px !important;
+  flex: 1 !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  height: fit-content !important;
+
+}
+
+.iao-faq-collapse > .ant-collapse-item > .ant-collapse-header {
+  // border-bottom: 1px solid;
+  // border-radius: 0px !important;
+  background-color: white !important;
+  flex: auto !important;
+  font-weight: 500 !important;
+  flex-direction: row-reverse !important;
+  overflow: hidden !important;
+  padding-left: 16px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  font-size: 16px;
+}
+
+.iao-faq-collapse > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+  padding-left: 18px !important;
+
+}
+
+.iao-login > .ant-modal-content {
+  padding-left: 0px !important;
+}
+
+@media (width <= 500px) {
+  .iao-search-input {
+    padding: 12px !important;
+    font-size: 14px !important
+
+  }
+  #userPhone::placeholder, #userEmail::placeholder {
+    font-size: 14px !important
+  }
+
+  .iao-faq-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding-left: 2px !important;
+    padding-right: 0px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    line-height: 20px !important;
+    font-size: 14px;
+  }
+  .iao-faq-collapse > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding-left: 3px !important;
+    line-height: 24px;
+  }
+
+  .ant-input-affix-wrapper > .ant-input::placeholder {
+    font-size: 12px !important
+  }
+
+.ant-input::placeholder {
+  font-size: 12px !important
+}
+  .iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
+    padding-inline-end: 6px !important;
+    margin-inline: 0px !important;
+  }
+  .iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
+    font-size: 14px !important;
+  }
+
+  .iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
+    padding-inline-end: 6px !important;
+    margin-inline: 0px !important;
+  }
+  .iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
+    font-size: 14px !important;
+  }
+  #rc-menu-uuid-31867-1-SubMenu-popup {
+    width: 120px !important
+  }
+
+}
+
+
+.iao-input-number-scale-up > .ant-select {
+  width: 100%;
+  height: max-content;
+}
+
+.iao-input-number-scale-up > .ant-input-number-input-wrap {
+  height: 100%;
+}
+
+.iao-input-number-scale-up > .ant-input-number-input-wrap > .ant-input-number-input {
+  height: 100%;
+}
+
+//  .ant-input-number-input{
+//  position:absolute;
+//  top:3.6px; 
+//  }
+.iao-select-border {
+  height: 100% !important;
+}
+
+.ant-modal-content > .ant-picker {
+  height: 100% !important;
+  border-width: 2px !important;
+  width: 100% !important;
+}
+
+.iao-select-border-warning {
+  height: 100% !important;
+}
+
+.iao-select-border-changed > .ant-select-selector {
+  border-color: #17b169 !important;
+  border-width: 2px !important;
+}
+
+.iao-select-border-warning > .ant-select-selector {
+  border-color: $warning !important;
+  border-width: 2px !important;
+}
+
+.ant-table-wrapper > .ant-spin-nested-loading > .ant-spin-container > .ant-pagination {
+  padding-left: 8px !important;
+}
+
+.iao-admin-edit > .ant-modal-content > .ant-modal-footer {
+  margin-right: 8px !important;
+
+}
+
+.iao-select-border > .ant-select-selector {
+  border-width: 2px !important;
+  height: 100% !important;
+}
+
+.iao-sub-menu > .ant-menu-submenu-title {
+  margin: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+.iao-sub-menu-color1 {
+  font-weight:400 !important;
+}
+.iao-sub-menu-color1:hover{
+  background-color:rgb(216 180 254) !important;
+}
+
+.iao-sub-menu-color1 > .ant-menu-submenu-title {
+  font-weight: 700 !important;
+  font-size: 13px;
+  color:purple !important;
+  margin: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  background-color: #faf5ff;
+}
+
+
+.iao-menu {
+  margin: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+
+  &-color1 {
+    @extend .iao-menu;
+    background-color: #faf5ff;
+  }
+}
+
+.iao-menu:hover{
+  background-color:rgb(216 180 254) !important;
+}
+
+
+#table-fixed-height div > .tbody > .td {
+  font-size: 13px !important;
+} 
+
+
+// #table-fixed-height tbody {
+//   height: calc(100vh - 300px);
+// }
+
+.iao-drawer-round > .ant-drawer-content-wrapper {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.ant-input-outlined:focus, .ant-input-outlined:hover {
+  border-color: $primary;
+  box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
+}
+
+.iao-ant-radio > .ant-radio > .ant-radio-input {
+  z-index: 0 !important;
+}
+
+.ant-input-affix-wrapper-focused {
+  z-index: 0 !important;
+}
+
+.ant-picker-dropdown {
+  z-index: 0 !important;
+}
+
+.ant-upload-list-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.iao-ant-checkbox-inner > span > .ant-checkbox-inner {
+  border: 1px solid #D0D5D7 !important
+
+}

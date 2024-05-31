@@ -1,0 +1,8 @@
+next.config.js
+postcss.config.js
+.*
+/public
+/node_modules
+*.json
+*.md
+tailwind.config.ts

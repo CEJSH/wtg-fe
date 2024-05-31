@@ -1,0 +1,15 @@
+export const COLORS = {
+  primary: '#009A3D',
+  info: '#0853bd',
+  warning: '#E02D3C',
+  link: '#2b79ef',
+  textBase: '#111111',
+  bgGray: '#f2f4f4',
+  gray: { main: '#A8A8A8', sub: '#E0E0E0', disabled: '#C6C6C6' },
+  formDivider: '#777777',
+  formDividerLight: '#d6d4d4',
+  modalDivider: '#cccccc',
+  white: '#ffffff',
+  warningOrange: '#EA7000',
+  discountOrange: '#F97315',
+};

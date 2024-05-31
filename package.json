@@ -9,7 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "antd": "^5.17.4",
+    "clsx": "^2.1.1",
     "next": "14.2.3",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -22,6 +26,8 @@
     "eslint-config-next": "14.2.3",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
     "typescript": "^5"
   }
 }
