@@ -5,35 +5,33 @@
   box-shadow: none;
 }
 
-
-
 .ant-menu::-webkit-scrollbar,
 .ant-table-container .ant-table-body::-webkit-scrollbar {
-  width: 5px; 
+  width: 5px;
   height: 6px;
 }
 .ant-table-container .ant-table-body::-webkit-scrollbar-track {
   background: white !important;
 }
-.ant-menu::-webkit-scrollbar-track{
+.ant-menu::-webkit-scrollbar-track {
   background: white;
 }
 .short-check > span {
-display: flex !important;
-align-self: center !important;
-padding-top: 0px !important;
-font-size: 15px;
-font-weight: 500;
+  display: flex !important;
+  align-self: center !important;
+  padding-top: 0px !important;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .ant-pagination {
-margin-block: 8px !important;
+  margin-block: 8px !important;
 }
 .ant-menu::-webkit-scrollbar-thumb,
 .ant-table-container .ant-table-body::-webkit-scrollbar-thumb {
-  background-color: #b0b8c1; 
-  border-radius: 10px; 
-  border: none; 
+  background-color: #b0b8c1;
+  border-radius: 10px;
+  border: none;
 }
 
 #filterDiv > .ant-input-wrapper {
@@ -50,7 +48,7 @@ margin-block: 8px !important;
 
 .iao-textarea:focus,
 .iao-textarea:hover {
-  border-color:#009a3d !important;
+  border-color: #009a3d !important;
 }
 .ant-drawer-wrapper-body > .ant-drawer-body {
   padding-bottom: 8px !important;
@@ -60,21 +58,21 @@ margin-block: 8px !important;
 
 .ant-table-thead .ant-table-cell {
   font-weight: 600 !important;
-  font-size:  13px !important;
+  font-size: 13px !important;
   padding-inline: 12px !important;
 }
 
 .ant-table-tbody > .ant-table-row > .ant-table-cell {
   border-right: 1px solid #f0f0f0 !important;
-  font-size:  13px !important;
+  font-size: 13px !important;
   padding-inline: 12px !important;
   padding-top: 4px !important;
   padding-bottom: 4px !important;
   height: 36px !important;
 }
 
-
-.factng-select > .ant-select-selector, .factng-select > .ant-select-selector > .ant-select-selection-placeholder {
+.factng-select > .ant-select-selector,
+.factng-select > .ant-select-selector > .ant-select-selection-placeholder {
   color: #727678 !important;
   font-size: 18px !important;
 }
@@ -112,19 +110,25 @@ margin-block: 8px !important;
   box-shadow: none;
 }
 
-.iao-search-input > .ant-input {
+.wtg-input > .ant-input-wrapper > input {
   font-weight: 500 !important;
-
 }
 
-.iao-search-input > .ant-input::placeholder {
-  color: #009a3d !important;
-}
+// .wtg-input > .ant-input-group {
+//   display: flex !important;
+//   height: 100% !important;
+//   padding-left: 28px !important;
+//   padding-right: 27px !important;
+// }
 
-#userPhone::placeholder, #userEmail::placeholder {
+// .iao-search-input > .ant-input::placeholder {
+//   color: #009a3d !important;
+// }
+
+#userPhone::placeholder,
+#userEmail::placeholder {
   color: #2b2d2f !important;
 }
-
 
 .iao-table-cell-color-1 {
   //background: #eeeeee !important;
@@ -157,14 +161,12 @@ margin-block: 8px !important;
   align-items: center !important;
   padding-top: 6px !important;
   padding-bottom: 6px !important;
-
 }
 
 .iao-collapse-issue > .ant-collapse-item > .ant-collapse-header {
   align-items: center !important;
   padding-top: 4px !important;
   padding-bottom: 4px !important;
-
 }
 
 .ant-checkbox {
@@ -178,20 +180,18 @@ margin-block: 8px !important;
 
 .iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
   padding-inline-end: 4px !important;
-
 }
 
 .iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
-  font-size: 18px ! important;
+  font-size: 18px !important;
 }
 
 .iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
   padding-inline-end: 4px !important;
-
 }
 
 .iao-collapse-issue > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon > .anticon-caret-right {
-  font-size: 15px ! important;
+  font-size: 15px !important;
 }
 
 // faq collapse
@@ -204,7 +204,6 @@ margin-block: 8px !important;
   flex-direction: row !important;
   width: 100% !important;
   height: fit-content !important;
-
 }
 
 .iao-faq-collapse > .ant-collapse-item > .ant-collapse-header {
@@ -223,7 +222,6 @@ margin-block: 8px !important;
 
 .iao-faq-collapse > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
   padding-left: 18px !important;
-
 }
 
 .iao-login > .ant-modal-content {
@@ -233,11 +231,11 @@ margin-block: 8px !important;
 @media (width <= 500px) {
   .iao-search-input {
     padding: 12px !important;
-    font-size: 14px !important
-
+    font-size: 14px !important;
   }
-  #userPhone::placeholder, #userEmail::placeholder {
-    font-size: 14px !important
+  #userPhone::placeholder,
+  #userEmail::placeholder {
+    font-size: 14px !important;
   }
 
   .iao-faq-collapse > .ant-collapse-item > .ant-collapse-header {
@@ -254,12 +252,12 @@ margin-block: 8px !important;
   }
 
   .ant-input-affix-wrapper > .ant-input::placeholder {
-    font-size: 12px !important
+    font-size: 12px !important;
   }
 
-.ant-input::placeholder {
-  font-size: 12px !important
-}
+  .ant-input::placeholder {
+    font-size: 12px !important;
+  }
   .iao-collapse > .ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
     padding-inline-end: 6px !important;
     margin-inline: 0px !important;
@@ -276,11 +274,9 @@ margin-block: 8px !important;
     font-size: 14px !important;
   }
   #rc-menu-uuid-31867-1-SubMenu-popup {
-    width: 120px !important
+    width: 120px !important;
   }
-
 }
-
 
 .iao-input-number-scale-up > .ant-select {
   width: 100%;
@@ -297,7 +293,7 @@ margin-block: 8px !important;
 
 //  .ant-input-number-input{
 //  position:absolute;
-//  top:3.6px; 
+//  top:3.6px;
 //  }
 .iao-select-border {
   height: 100% !important;
@@ -329,7 +325,6 @@ margin-block: 8px !important;
 
 .iao-admin-edit > .ant-modal-content > .ant-modal-footer {
   margin-right: 8px !important;
-
 }
 
 .iao-select-border > .ant-select-selector {
@@ -343,22 +338,21 @@ margin-block: 8px !important;
   border-radius: 0 !important;
 }
 .iao-sub-menu-color1 {
-  font-weight:400 !important;
+  font-weight: 400 !important;
 }
-.iao-sub-menu-color1:hover{
-  background-color:rgb(216 180 254) !important;
+.iao-sub-menu-color1:hover {
+  background-color: rgb(216 180 254) !important;
 }
 
 .iao-sub-menu-color1 > .ant-menu-submenu-title {
   font-weight: 700 !important;
   font-size: 13px;
-  color:purple !important;
+  color: purple !important;
   margin: 0 !important;
   width: 100% !important;
   border-radius: 0 !important;
   background-color: #faf5ff;
 }
-
 
 .iao-menu {
   margin: 0 !important;
@@ -371,15 +365,13 @@ margin-block: 8px !important;
   }
 }
 
-.iao-menu:hover{
-  background-color:rgb(216 180 254) !important;
+.iao-menu:hover {
+  background-color: rgb(216 180 254) !important;
 }
-
 
 #table-fixed-height div > .tbody > .td {
   font-size: 13px !important;
-} 
-
+}
 
 // #table-fixed-height tbody {
 //   height: calc(100vh - 300px);
@@ -390,8 +382,9 @@ margin-block: 8px !important;
   border-top-right-radius: 8px;
 }
 
-.ant-input-outlined:focus, .ant-input-outlined:hover {
-  border-color: $primary;
+.ant-input-outlined:focus,
+.ant-input-outlined:hover {
+  border: none;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
 
@@ -413,6 +406,5 @@ margin-block: 8px !important;
 }
 
 .iao-ant-checkbox-inner > span > .ant-checkbox-inner {
-  border: 1px solid #D0D5D7 !important
-
+  border: 1px solid #d0d5d7 !important;
 }

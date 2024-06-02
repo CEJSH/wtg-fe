@@ -14,9 +14,9 @@ const fontFamily = ['Pretendard', notoSansKr.style.fontFamily].join(',');
 
 const theme: ThemeConfig = {
   token: {
-    colorPrimary: COLORS.primary,
-    colorInfo: COLORS.info,
-    colorWarning: COLORS.warning,
+    // colorPrimary: COLORS.primary,
+    // colorInfo: COLORS.info,
+    // colorWarning: COLORS.warning,
     colorLink: COLORS.link,
     colorTextBase: COLORS.textBase,
     fontFamily,

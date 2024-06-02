@@ -4,22 +4,17 @@ import { Logo } from "../theme/uiConfig";
 
 export function Header () {
     return (
-     
-          <div className="flex flex-row items-center h-full">
-            <div className="mr-[16px] !h-full flex items-center py-[8px] px-[20px]">
+          <div className="h-[80px] bg-[#fafafa] w-full flex flex-row items-center">
+            <div className="mr-[16px] h-full flex items-center py-[8px] px-[36px]">
               <Link className="w-full flex items-center h-full" href={'/'}>
                 <Image
                   src={Logo}
                   style={{ verticalAlign: 'initial' }}
-                  objectFit="cover"
                   alt="logo"
-                  height={42}
+                  height={34}
                 />
               </Link>
             </div>
           </div>
-        
- 
-    
     )
 }
