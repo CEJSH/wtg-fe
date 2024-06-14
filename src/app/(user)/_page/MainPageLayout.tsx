@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { SearchProps } from 'antd/lib/input';
 import { InputWrapper } from '@/app/_components/input-wrapper';
 import { InfoBox } from '@/app/_components/info-box';
-import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export enum DrawerOpenStateType {
   Desktop,

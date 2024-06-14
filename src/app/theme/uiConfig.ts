@@ -1,8 +1,8 @@
 import LoveImg from '/public/love.png';
 import FriendImg from '/public/friend.png';
 import LogoImg from '/public/wtg-logo.png';
+import ConsImg from '/public/construction.png';
 import { StaticImageData } from 'next/image';
-
 
 interface BackgroundInterface {
   headerColor: `#${string}`;
@@ -13,12 +13,12 @@ interface BackgroundInterface {
   footerColor: `#${string}`;
   footerTextColor: `#${string}`;
   searchResultColor: `#${string}`;
-
 }
 
 export const Love: StaticImageData | string = LoveImg;
 export const Friend: StaticImageData | string = FriendImg;
 export const Logo: StaticImageData | string = LogoImg;
+export const Marker: StaticImageData | string = ConsImg;
 // export const IconList: (StaticImageData | string)[] = [
 //   familyIcon,
 //   patentIconImg,
@@ -37,8 +37,6 @@ export const Logo: StaticImageData | string = LogoImg;
 //   corporateIconImg,
 // ];
 
-
-
 export const Background: BackgroundInterface = {
   headerColor: '#fff', // 헤더 배경
   headerLogo: Love, // 헤더 로고 이미지
@@ -48,7 +46,6 @@ export const Background: BackgroundInterface = {
   footerColor: '#282B2E', // 푸터 배경
   footerTextColor: '#fff', // 푸터 글씨 색
   searchResultColor: '#f0f0f0', // 검색결과 컴포넌트 배경
-
 };
 
 export const headerHeight = 'h-[60px]';
