@@ -21,13 +21,13 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const data = await response.json(); // JSON으로 변환
+      const data = await response.json();
       return data; // 변환된 JSON 데이터만 반환
     },
   });
 
   const [done, setDone] = useState(false);
-  const [positions, setPositions] = useState<{ title: string; latlng: any }[]>([]);
+  const [positions, setPositions] = useState<{ title: string; latlng: any; cDay: string }[]>([]);
   const [isMapReady, setIsMapReady] = useState<boolean>(false);
   useEffect(() => {
     if (!data || isLoading || error) return;
@@ -39,6 +39,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
             const newPosition = {
               title: result[0].address.address_name,
               latlng: new kakao.maps.LatLng(Number(result[0].y), Number(result[0].x)),
+              cDay: d['realStcnsDay'] || d['stcnsSchedDay'],
             };
             resolve(newPosition);
           } else {
@@ -87,7 +88,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
       const userViewMap = new kakao.maps.Map(container, options);
       if (positions.length > 0) {
         console.log(positions.length);
-        const imageSize = new kakao.maps.Size(24, 35);
+        const imageSize = new kakao.maps.Size(24, 38);
 
         const markerImage = new kakao.maps.MarkerImage('/pcrane.png', imageSize);
         for (let i = 0; i < positions.length; i++) {
@@ -98,21 +99,22 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
             image: markerImage,
             clickable: true,
           });
-          const placeName = positions[i].title;
-          console.log(placeName);
-          const weeDo = positions[i].latlng['Ma'];
-          const kyungDo = positions[i].latlng['La'];
-          const findUrl = `https://map.kakao.com/link/map/${weeDo},${kyungDo},${placeName}`;
+          const placeName = positions[i].title.slice(7).replaceAll(' ', '');
+          // const weeDo = positions[i].latlng['Ma'];
+          // const kyungDo = positions[i].latlng['La'];
+          const findUrl = `https://map.kakao.com/link/search/${placeName}`;
           marker.setMap(userViewMap);
-
+          const bgColor = positions[i].cDay.startsWith('2024') ? `rgb(190, 18, 60)` : `rgb(249, 115, 22)`;
           // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
           const closeOverlay = () => {
             customOverlay.setMap(null);
           };
           const content =
-            '<div onClick="()=>{ customOverlay.setMap(null); }" class="customoverlay" style="padding-bottom: 1px; padding-left: 3px; padding-right: 3px; opacity: 0.8; line-height: 1.4; color: rgb(255, 255, 255); background-color: rgb(96, 96, 96); font-size:10px; margin-right:8px; text-overflow: ellipsis;">' +
+            '<div class="customoverlay" style="padding-bottom: 1px; padding-left: 3px; padding-right: 3px; opacity: 0.7; line-height: 1.4; color: rgb(255, 255, 255); background-color: ' +
+            `${bgColor};` +
+            'font-size:10px; margin-right:8px; text-overflow: ellipsis;">' +
             `  <a href=${findUrl} target="_blank">` +
-            `    <span class="title">${positions[i].title}</span>` +
+            `    <span class="title">${positions[i].title.slice(7)}</span>` +
             '  </a>' +
             '</div>';
 
@@ -144,7 +146,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
               <Image src={Logo} style={{ verticalAlign: 'initial' }} alt="logo" height={34} />
             </Link>
           </div>
-          <div className="tracking-wide">입력하신 법정동의 2023-2024년 착공 밑 착공 예정 지역입니다</div>
+          <div className="tracking-wide">입력하신 법정동의 2023-2024년 착공 및 착공 예정 지역입니다</div>
         </div>
         <div className="w-full h-[1px] bg-[#e1e1e1]"></div>
         <div className="pl-[50px] flex h-[50px] w-full items-center text-[#d6dbdc]">

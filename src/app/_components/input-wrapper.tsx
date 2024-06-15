@@ -1,4 +1,3 @@
-import { QueryClient, useQuery } from '@tanstack/react-query';
 import { ConfigProvider } from 'antd';
 
 export function InputWrapper({ children }: { children: React.ReactNode }) {

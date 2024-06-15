@@ -3,7 +3,6 @@
 import CommonProvider from '@/app/_common/common';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useRef } from 'react';
 import SearchedAreaLayout from './SeachedAreaLayout';
 const client = new QueryClient();
 

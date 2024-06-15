@@ -1,5 +1,3 @@
-import { ConfigProvider } from 'antd';
-
 export function InfoBox({ children }: { children?: React.ReactNode }) {
   const boxClassName = 'pt-[4px] pb-[11px] border-[1px] border-solid border-y-1 border-x-0 border-t-0 border-[#cccccc]';
   return (
