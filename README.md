@@ -1,7 +1,7 @@
-## 🎺 공사 소음을 피하고 싶은 사람들을 위한 서비스 🔍 
+## 🎺  공사 소음을 피하고 싶은 사람들을 위한 서비스  🔍 
 <br/>
 
-###  🏗️ 프로젝트 소개
+###  🏗️  프로젝트 소개
 이사 한 집 옆건물이 공사를 하는 상황을 피하고 싶은 사용자를 위한 서비스
 - 더 나은 주거 환경을 위한 추가 옵션이 필요하다면?
 - 통제할 수 있는 여지가 있다면 통제하고 싶으신 분
@@ -10,25 +10,28 @@
 
 <br/>
 
-###  🏗️ 프로젝트의 필요성
+###  🏗️  프로젝트의 필요성
 
-> 공사장 소음이 차지하는 비중이 다른 생활 소음에 비해 압도적으로 높은 점,<br/> 공사장 소음 민원이 증가하고 있다는 점과 실제 사례를 바탕으로 <br/> 이사가 잦은 자취생들이 공사 지역을 피해 이사하는 것을 돕기 위한 목적으로 주제를 구상하였습니다.<br/> 공사 소음으로 인한 피해를 줄이면서, <br/>쾌적한 주거환경의 선택에 도움을 주기 위한 도구를 개발하고자 합니다.
+공사장 소음이 차지하는 비중이 다른 생활 소음에 비해 압도적으로 높으며,<br/> 공사장 소음 민원이 증가하고 있다는 점과 실제 사례를 바탕으로 <br/>공사 소음으로 인한 피해를 줄이면서, <br/>쾌적한 주거환경의 선택에 도움을 주기 위한 도구를 개발하고자 합니다.
 
 <br/>
 
-###  🏗️ 기획 의도와 방향성
+###  🏗️  기획 의도와 방향성
 
 ![img](https://github.com/CEJSH/WhereToGo_project/assets/95568006/4e6c77ba-3517-44b5-9c84-09990a756b82)
 
-- 소음이 싫은 자취생들의 이사 지도
+- 소음이 싫은 사람들의 이사 지도
 
 <br/>
 
-###  🏗️ 활용한 DATA API
+###  🏗️  활용한 DATA API
 
 - [ 국토교통부 ] 건축인허가정보서비스 API
 - [ KAKAO ] KAKAO MAP API
 
+<br/>
+###  🏗️  API 명세
+  [API Docs]([https://github.com/CEJSH/wtg-fe/wiki/%08wtg-API-DOCS] "api 위키")
 <br/>
 
 ###  ✔ 아키텍쳐
@@ -48,24 +51,24 @@
 <br/>
 
 ##  ✔ 시작가이드
-###  🏗️ For building and running the application you need :
+###  🏗️  For building and running the application you need :
 - Node.js 20.3.1
 - npm 10.1.0
 - mysql2 3.10.0
 
 
-###  🏗️ Installation
+###  🏗️  Installation
 ```
 # git clone https://github.com/CEJSH/wtg-fe.git
 ```
-###  🏗️ Server
+###  🏗️  Server
 ```
 # cd wtg-be
 # npm install
 # npm run start
 ```
 
-###  🏗️ Client
+###  🏗️  Client
 ```
 # cd wtg-fe
 # npm install
