@@ -30,9 +30,10 @@
 - [ KAKAO ] KAKAO MAP API
 
 <br/>
+
 ###  🏗️  API 명세
 
-[API Docs](https://github.com/CEJSH/wtg-fe/wiki/%08wtg-API-DOCS)
+- [API Docs](https://github.com/CEJSH/wtg-fe/wiki/%08wtg-API-DOCS)
 <br/>
 
 ###  ✔ 아키텍쳐
