@@ -1,5 +1,5 @@
 ## 🎺 공사 소음을 피하고 싶은 사람들을 위한 서비스 🔍 
-
+<br/>
 ###  🏗️ 프로젝트 소개
 이사 한 집 옆건물이 공사를 하는 상황을 피하고 싶은 사용자를 위한 서비스
 - 더 나은 주거 환경을 위한 추가 옵션이 필요하다면?
@@ -25,22 +25,24 @@
 - [ 국토교통부 ] 건축인허가정보서비스 API
 - [ KAKAO ] KAKAO MAP API
 
+<br/>
+
 
 ###  ✔ 아키텍쳐
 
-![image](https://github.com/LeeMyungdeok/Recipe-provided-project/assets/115915362/0d1e4082-b7d8-4a7a-9116-cf92d4c608e4)
+
 
 
 ###  ✔ 시퀀스 다이어그램
 
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/53bd76dd-5e53-43ce-abee-c278e8d4dc3f)
-
+<br/>
 
 ###  ✔ 실행 화면
 
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/ec08141e-9052-4fb9-9f27-5cca64cf0a19)
 
-
+<br/>
 ##  ✔ 시작가이드
 ###  🏗️ For building and running the application you need :
 - Node.js 20.3.1
