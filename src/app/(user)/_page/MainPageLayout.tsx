@@ -53,6 +53,7 @@ const MainPageLayout = () => {
       geocoder.addressSearch(inputPlace, setLatLongFn);
     }
   }, [inputPlace]);
+
   useEffect(() => {
     if (inputPlace === undefined) {
       return;

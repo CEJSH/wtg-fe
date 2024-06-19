@@ -1,0 +1,44 @@
+@startuml
+participant User
+participant "Web Client" as C
+participant "wtg Server" as S
+participant "KAKAO API" as K
+
+User -> C: GET/
+activate C
+C -> S: static asset 요청(HTML/CSS 등)
+activate S
+S --> C: HTML/CSS 등 응답
+deactivate S
+C -> User: 메인 페이지
+deactivate C
+
+loop
+    User -> C: 1. 지역 입력 & 찾기 버튼
+    activate C
+    C -> K: 입력한 지역(법정동)의 위경도 좌표 및 지도 API 요청
+    activate K
+    K --> C: 좌표, 주소정보 등 지도 API 응답
+    deactivate K
+    C -> C: 해당 법정동의 공사장을 보여주는 검색 결과 페이지로 redirection
+
+    C -> User: 검색 결과 페이지
+    C -> S: 해당 지역(법정동)의 공사장 데이터 요청(파라미터 -> KAKAO API result)
+    activate S
+    S --> C: 공사장 데이터 응답
+    deactivate S
+    C -> K: 공사장 데이터의 주소에 맞는 위경도 좌표 요청
+    activate K
+    K --> C: 좌표값 응답
+    deactivate K
+    C -> User: 좌표값에 해당하는 위치에 마커 노출
+    deactivate C
+end
+
+loop
+    User -> C: 2. 특정 마커 오버레이(주소) 클릭
+    activate C
+    C -> C: 클라이언트에 저장된 링크로 새 윈도우
+    C -> User: 해당 마커의 주소 지도 검색 결과 페이지
+end
+@enduml

@@ -17,7 +17,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
   const { data, error, isLoading } = useQuery({
     queryKey: ['getSearchedRegionData'],
     queryFn: async () => {
-      const response = await fetch(`${BaseURL}/map/get-by-searched-region?b_code=${b_code}`);
+      const response = await fetch(`${BaseURL}/construction/get-by-searched-region?b_code=${b_code}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -140,17 +140,19 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
   return (
     <>
       <div className="bg-[white] flex flex-col w-[100vw] h-[130px] text-center items-center">
-        <div className="w-full flex flex-row items-center justify-start text-[24px] text-[#49beb7] h-[80px]">
+        <div className="w-full flex flex-row items-center justify-start text-[20px] md:text-[22px] lg:text-[24px] text-[#49beb7] h-[80px]">
           <div className="mr-[16px] h-full flex items-center py-[8px] px-[36px]">
             <Link className="w-full flex items-center h-full" href={'/'}>
               <Image src={Logo} style={{ verticalAlign: 'initial' }} alt="logo" height={34} />
             </Link>
           </div>
-          <div className="tracking-wide">입력하신 법정동의 2023-2024년 착공 및 착공 예정 지역입니다</div>
+          <div className="tracking-wide pr-[36px] break-keep">
+            입력하신 법정동의 2023-2024년 착공 및 착공 예정 지역입니다
+          </div>
         </div>
         <div className="w-full h-[1px] bg-[#e1e1e1]"></div>
         <div className="pl-[50px] flex h-[50px] w-full items-center text-[#d6dbdc]">
-          <div>Boom Boom Bass 우린 좀 더 lower lower lower</div>
+          <div></div>
         </div>
         <div className="w-full h-[1px] bg-[#e1e1e1]"></div>
       </div>
