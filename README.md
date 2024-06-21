@@ -36,9 +36,6 @@
 - [API Docs](https://github.com/CEJSH/wtg-fe/wiki/%08wtg-API-DOCS)
 <br/>
 
-###  ✔ 아키텍쳐
-
-<br/>
 
 ###  ✔ 시퀀스 다이어그램
 
