@@ -22,7 +22,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      return data; // 변환된 JSON 데이터만 반환
+      return data;
     },
   });
 
@@ -43,7 +43,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
             };
             resolve(newPosition);
           } else {
-            resolve(null); // 실패 또는 결과가 없는 경우 null 반환
+            resolve(null);
           }
         });
       });
@@ -94,21 +94,16 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
         for (let i = 0; i < positions.length; i++) {
           const marker = new kakao.maps.Marker({
             // map: userViewMap, // 마커를 표시할 지도
-            position: positions[i].latlng, // 마커를 표시할 위치
+            position: positions[i].latlng,
             title: positions[i].title,
             image: markerImage,
             clickable: true,
           });
           const placeName = positions[i].title.slice(7).replaceAll(' ', '');
-          // const weeDo = positions[i].latlng['Ma'];
-          // const kyungDo = positions[i].latlng['La'];
           const findUrl = `https://map.kakao.com/link/search/${placeName}`;
           marker.setMap(userViewMap);
           const bgColor = positions[i].cDay.startsWith('2024') ? `rgb(190, 18, 60)` : `rgb(249, 115, 22)`;
-          // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-          const closeOverlay = () => {
-            customOverlay.setMap(null);
-          };
+
           const content =
             '<div class="customoverlay" style="padding-bottom: 1px; padding-left: 3px; padding-right: 3px; opacity: 0.7; line-height: 1.4; color: rgb(255, 255, 255); background-color: ' +
             `${bgColor};` +
@@ -118,7 +113,7 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
             '  </a>' +
             '</div>';
 
-          // 커스텀 오버레이를 생성합니다
+          // 커스텀 오버레이를 생성
           const customOverlay = new kakao.maps.CustomOverlay({
             map: userViewMap,
             position: positions[i].latlng,

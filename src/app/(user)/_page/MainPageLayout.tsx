@@ -7,7 +7,7 @@ import { Input } from 'antd';
 import { useRouter } from 'next/navigation';
 import { SearchProps } from 'antd/lib/input';
 import { InputWrapper } from '@/app/_components/input-wrapper';
-import { InfoBox } from '@/app/_components/info-box';
+import { InfoBoxes } from '@/app/_components/info-box';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export enum DrawerOpenStateType {
@@ -89,7 +89,7 @@ const MainPageLayout = () => {
           </InputWrapper>
         </div>
         {/**하단 */}
-        <InfoBox />
+        <InfoBoxes />
       </div>
     </QueryClientProvider>
   );
