@@ -1,14 +1,16 @@
 'use client';
-
-import { Logo } from '@/app/theme/uiConfig';
 import { useQuery } from '@tanstack/react-query';
-import clsx from 'clsx';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import SearchedAreaInfoBox from './SearchedAreaInfoBox';
+import SearchedAreaInfoBox from '../../_components/SearchedAreaInfoBox';
+import SearchedAreaWrapper from '@/app/_components/SearchedAreaWrapper';
+import { useSearchParams } from 'next/navigation';
 
-const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; b_code: string }) => {
+const SearchedArea = () => {
+  const searchParams = useSearchParams();
+  const lat = searchParams.get('latitude');
+  const long = searchParams.get('longitude');
+  const b_code = searchParams.get('b_code');
+
   console.log(lat, long, b_code);
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const BaseURL = !!process.env.NEXT_PUBLIC_BASE_SERVER_URL
@@ -133,30 +135,11 @@ const SearchedAreaLayout = ({ lat, long, b_code }: { lat: string; long: string; 
     }
   }, [isMapReady, lat, long, positions]);
   return (
-    <>
-      <div className="bg-[white] flex flex-col w-[100vw] h-[130px] text-center items-center">
-        <div className="w-full flex flex-row items-center justify-start text-[20px] md:text-[22px] lg:text-[24px] text-[#49beb7] h-[80px]">
-          <div className="mr-[16px] h-full flex items-center py-[8px] px-[36px]">
-            <Link className="w-full flex items-center h-full" href={'/'}>
-              <Image src={Logo} style={{ verticalAlign: 'initial' }} alt="logo" height={34} />
-            </Link>
-          </div>
-          <div className="tracking-wide pr-[36px] break-keep">
-            입력하신 법정동의 2023-2024년 착공 및 착공 예정 지역입니다
-          </div>
-        </div>
-        <div className="w-full h-[1px] bg-[#e1e1e1]"></div>
-        <div className="pl-[50px] flex h-[50px] w-full items-center text-[#d6dbdc]">
-          <div></div>
-        </div>
-        <div className="w-full h-[1px] bg-[#e1e1e1]"></div>
-      </div>
-      <div className={clsx('bg-[#F2F4F4] w-[100vw] h-[calc(100vh-130px)] flex flex-row !items-center')}>
-        <div ref={mapContainerRef} className="w-full h-[100%]"></div>
-        <SearchedAreaInfoBox data={data} />
-      </div>
-    </>
+    <SearchedAreaWrapper>
+      <section ref={mapContainerRef} className="w-full h-[100%]" />
+      <SearchedAreaInfoBox data={data} />
+    </SearchedAreaWrapper>
   );
 };
 
-export default SearchedAreaLayout;
+export default SearchedArea;

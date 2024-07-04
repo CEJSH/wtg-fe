@@ -1,5 +1,4 @@
 'use client';
-
 const SearchedAreaInfoBox = ({ data }: { data: any }) => {
   console.log(data);
   return (

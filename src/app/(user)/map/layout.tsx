@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'WTM - 서울시 주거 지역 선정 보조 서비스',
+  title: '서울시 주거 지역 선정 보조 서비스',
   description: '공사소음 free한 주거지역을 찾아드립니다.',
 };
 

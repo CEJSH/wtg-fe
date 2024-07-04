@@ -1,24 +1,14 @@
 'use client';
-
-import CommonProvider from '@/app/_common/common';
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'next/navigation';
-import SearchedAreaLayout from './SeachedAreaLayout';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import SearchedArea from './SeachedArea';
 const client = new QueryClient();
 
-const Map = () => {
-  const searchParams = useSearchParams();
-  const lat = searchParams.get('latitude');
-  const long = searchParams.get('longitude');
-  const b_code = searchParams.get('b_code');
-
+const MapPage = () => {
   return (
     <QueryClientProvider client={client}>
-      <CommonProvider>
-        <SearchedAreaLayout lat={lat!} long={long!} b_code={b_code!} />
-      </CommonProvider>
+      <SearchedArea />
     </QueryClientProvider>
   );
 };
 
-export default Map;
+export default MapPage;

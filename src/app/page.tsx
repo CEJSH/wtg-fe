@@ -1,12 +1,9 @@
-import CommonProvider from './_common/common';
-import MainPageLayout from './(user)/_page/MainPageLayout';
+import MainPageLayout from './_components/MainPageLayout';
 
 export default function Home() {
   return (
-    <CommonProvider>
-      <div className="flex flex-row w-full bg-blue-400 h-[100vh]">
-        <MainPageLayout />
-      </div>
-    </CommonProvider>
+    <div className="flex flex-col w-full bg-white h-[100vh-80px]">
+      <MainPageLayout />
+    </div>
   );
 }

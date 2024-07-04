@@ -1,13 +1,11 @@
 'use client';
-
 import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
-import { Header } from '../../_components/header';
 import { Input } from 'antd';
 import { useRouter } from 'next/navigation';
 import { SearchProps } from 'antd/lib/input';
-import { InputWrapper } from '@/app/_components/input-wrapper';
-import { InfoBoxes } from '@/app/_components/info-box';
+import { InputWrapper } from '@/app/_components/InputWrapper';
+import { InfoBoxes } from '@/app/_components/InfoBox';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export enum DrawerOpenStateType {
@@ -25,6 +23,7 @@ const MainPageLayout = () => {
     long: '',
     b_code: '',
   });
+
   const onSearch: SearchProps['onSearch'] = (value, _e, info) => {
     console.log(info?.source, value);
     setInputPlace(value);
@@ -70,27 +69,16 @@ const MainPageLayout = () => {
   return (
     <QueryClientProvider client={client}>
       <div className={clsx('w-full flex flex-col', 'bg-[white]')}>
-        <Header />
-        <div className="h-[460px] flex flex-col items-center bg-[#f6f8f5] bg-[url('../../public/city_image.jpg')] bg-cover">
-          {/**상단 Upper narrow part */}
-          <div className="h-full w-full max-w-[1050px] flex flex-row  justify-center">
-            <div className="pt-[156px]">
-              <div className="font-[700] h-[46px] text-[40px] tracking-[1px] mx-auto">{`어떤 곳을 찾고 계세요?`}</div>
-            </div>
-          </div>
-          {/**상단 Lower search-ui part */}
-          <InputWrapper>
-            <Input.Search
-              className="wtg-input !h-[60px] text-[16px] placeholder:!text-[16px]"
-              placeholder="원하시는 지역명을 입력해 주세요"
-              onSearch={onSearch}
-              enterButton
-            />
-          </InputWrapper>
-        </div>
-        {/**하단 */}
-        <InfoBoxes />
+        <InputWrapper>
+          <Input.Search
+            className="wtg-input !h-[60px] text-[16px] placeholder:!text-[16px]"
+            placeholder="원하시는 지역명을 입력해 주세요"
+            onSearch={onSearch}
+            enterButton
+          />
+        </InputWrapper>
       </div>
+      <InfoBoxes />
     </QueryClientProvider>
   );
 };
