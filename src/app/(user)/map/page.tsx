@@ -1,12 +1,14 @@
 'use client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import SearchedArea from './SeachedArea';
+import SearchedArea from './SearchedArea';
+import NewSearchedArea from './NewSearchedArea';
 const client = new QueryClient();
 
 const MapPage = () => {
   return (
     <QueryClientProvider client={client}>
-      <SearchedArea />
+      {/* <SearchedArea /> */}
+      <NewSearchedArea />
     </QueryClientProvider>
   );
 };
