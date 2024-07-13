@@ -78,8 +78,8 @@ const SearchedArea = () => {
       }
     };
     createMap();
-  }, [mapContainerRef.current, positions, b_code]);
-  // done 도 의존성 배열에서 제거!
+  }, [mapContainerRef.current, b_code]);
+  // done, positions 도 의존성 배열에서 제거!
   useEffect(() => {
     console.log('position changed', positions);
     if (isMapReady) {
