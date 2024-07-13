@@ -55,7 +55,8 @@ const SearchedArea = () => {
       setPositions(validPositions);
       setDone(true);
     });
-  }, [data, isLoading, error]);
+  }, [data, error]);
+  // isLoading의존성배열에 넣지 말것
 
   useEffect(() => {
     if (!mapContainerRef.current || !done) return;
@@ -77,8 +78,8 @@ const SearchedArea = () => {
       }
     };
     createMap();
-  }, [mapContainerRef.current, positions, done, b_code]);
-
+  }, [mapContainerRef.current, positions, b_code]);
+  // done 도 의존성 배열에서 제거!
   useEffect(() => {
     console.log('position changed', positions);
     if (isMapReady) {

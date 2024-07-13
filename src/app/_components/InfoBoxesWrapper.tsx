@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function InfoBoxesWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex pt-[40px] pb-[28px]">
