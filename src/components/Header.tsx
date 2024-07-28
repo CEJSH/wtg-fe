@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Logo } from '../theme/uiConfig';
+import { Logo } from '../app/theme/uiConfig';
 import { usePathname } from 'next/navigation';
 
 export function Header() {

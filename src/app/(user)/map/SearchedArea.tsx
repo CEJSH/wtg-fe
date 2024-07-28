@@ -1,9 +1,9 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useRef, useState } from 'react';
-import SearchedAreaInfoBox from '../../_components/SearchedAreaInfoBox';
-import SearchedAreaWrapper from '@/app/_components/SearchedAreaWrapper';
 import { useSearchParams } from 'next/navigation';
+import SearchedAreaWrapper from '@/components/SearchedAreaWrapper';
+import SearchedAreaInfoBox from '@/components/SearchedAreaInfoBox';
 
 const SearchedArea = () => {
   const searchParams = useSearchParams();

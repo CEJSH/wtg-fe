@@ -1,5 +1,4 @@
-import MainPageLayout from './_components/MainPageLayout';
-import MainPageLayout2 from './_components/NewMain';
+import MainPageLayout2 from '../components/NewMain';
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
-import { Header } from './_components/Header';
 import CommonProvider from './_common/common';
+import { Header } from '@/components/Header';
 
 export const metadata: Metadata = {
   title: { default: 'WTG', template: 'wtg | %s' },

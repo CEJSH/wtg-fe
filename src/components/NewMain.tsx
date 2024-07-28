@@ -4,9 +4,9 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { Input } from 'antd';
 import { useRouter } from 'next/navigation';
 import { SearchProps } from 'antd/lib/input';
-import { InputWrapper } from '@/app/_components/InputWrapper';
-import { InfoBoxes } from '@/app/_components/InfoBoxes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { InputWrapper } from './InputWrapper';
+import { InfoBoxes } from './InfoBoxes';
 
 export enum DrawerOpenStateType {
   Desktop,
@@ -33,6 +33,7 @@ const MainPageLayout2 = () => {
     }
     setInputPlace(value);
   };
+
   const fetchLatLong = useCallback((place: string) => {
     const geocoder = new kakao.maps.services.Geocoder();
     geocoder.addressSearch(place, (result: any, status: any) => {

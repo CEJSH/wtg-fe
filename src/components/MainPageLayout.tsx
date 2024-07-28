@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react';
 import { Input } from 'antd';
 import { useRouter } from 'next/navigation';
 import { SearchProps } from 'antd/lib/input';
-import { InputWrapper } from '@/app/_components/InputWrapper';
-import { InfoBoxes } from '@/app/_components/InfoBoxes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { InputWrapper } from './InputWrapper';
+import { InfoBoxes } from './InfoBoxes';
 
 export enum DrawerOpenStateType {
   Desktop,
@@ -25,7 +25,10 @@ const MainPageLayout = () => {
   });
 
   const onSearch: SearchProps['onSearch'] = (value, _e, info) => {
-    console.log(info?.source, value);
+    if (!value.trim()) {
+      alert('지역명을 입력해 주세요');
+      return;
+    }
     setInputPlace(value);
   };
 
@@ -33,17 +36,20 @@ const MainPageLayout = () => {
     const geocoder = new kakao.maps.services.Geocoder();
     const setLatLongFn = (result: any, status: any) => {
       if (status === kakao.maps.services.Status.OK) {
-        console.log('법정', result[0]['address']['b_code']);
-        if (result[0]['address']['b_code'].length < 1) {
+        const {
+          x,
+          y,
+          address: { b_code },
+        } = result[0];
+        if (b_code.length < 1) {
           return alert(`행정동명이 아닌 법정동/구의 명칭을 입력해 주세요`);
         } else {
-          setLatLong({ long: result[0]['x'], lat: result[0]['y'], b_code: result[0]['address']['b_code'] });
+          setLatLong({ long: x, lat: y, b_code });
         }
       }
       if (status === kakao.maps.services.Status.ZERO_RESULT) {
         alert(`${inputPlace}의 검색결과가 존재하지 않습니다.`);
       }
-      console.log(status);
     };
     if (inputPlace === '') {
       alert(`지역명을 입력해 주세요`);
