@@ -4,7 +4,7 @@
 
 export default function SearchedAreaInfoWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col w-[400px] h-full bg-white ">
+    <div className="flex flex-col w-[400px] h-full bg-white text-black">
       <div className="flex py-[16px] items-center justify-center h-[52px] font-[600] text-center text-[13px]">
         이 지역 공사 건수(2023 ~ 2024)
       </div>

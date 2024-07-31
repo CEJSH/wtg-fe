@@ -1,19 +1,19 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import SearchedAreaWrapper from '@/components/SearchedAreaWrapper';
 import SearchedAreaInfoBox from '@/components/SearchedAreaInfoBox';
 
 const NewSearchedArea = () => {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const lat = searchParams.get('latitude');
   const long = searchParams.get('longitude');
   const b_code = searchParams.get('b_code');
 
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const BaseURL = process.env.NEXT_PUBLIC_BASE_SERVER_URL || 'http://localhost:8000';
-
   const { data, error, isLoading } = useQuery({
     queryKey: ['getSearchedRegionData', b_code],
     queryFn: async () => {
@@ -53,6 +53,10 @@ const NewSearchedArea = () => {
 
   useEffect(() => {
     if (data && !isLoading && !error) {
+      if (data.data.length < 1) {
+        alert('해당 주소의 공사데이터가 없습니다');
+        router.push('/');
+      }
       fetchPositions(data);
     }
   }, [data, isLoading, error, fetchPositions]);

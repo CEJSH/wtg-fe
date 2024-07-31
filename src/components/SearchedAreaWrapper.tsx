@@ -6,7 +6,9 @@ export default function SearchedAreaWrapper({ children }: { children: React.Reac
   return (
     <section>
       <ExtraInfo />
-      <div className={clsx('bg-[#F2F4F4] w-[100vw] h-[calc(100vh-130px)] flex flex-row !items-center')}>{children}</div>
+      <div className={clsx('bg-[#F2F4F4] w-[100vw] min-h-[calc(100vh-130px)] flex flex-row !items-center')}>
+        {children}
+      </div>
     </section>
   );
 }

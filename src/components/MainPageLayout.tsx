@@ -74,7 +74,7 @@ const MainPageLayout = () => {
 
   return (
     <QueryClientProvider client={client}>
-      <div className={clsx('w-full flex flex-col', 'bg-[white]')}>
+      <div className={clsx('w-full flex flex-col h-full', 'bg-[white]')}>
         <InputWrapper>
           <Input.Search
             className="wtg-input !h-[60px] text-[16px] placeholder:!text-[16px]"
