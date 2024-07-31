@@ -8,7 +8,7 @@ export function Header() {
   const pathname = usePathname();
   return (
     <div className="w-full flex flex-row items-center justify-start text-[20px] md:text-[22px] lg:text-[24px] text-[#49beb7] h-[80px]">
-      <div className="w-full mr-[16px] h-full flex items-center py-[8px] px-[36px] gap-[30px]">
+      <div className="w-full mr-[16px] h-full flex items-center py-[8px] px-[8px] md:px-[36px] gap-[30px]">
         <Link className="flex items-center h-full" href={'/'}>
           <Image src={Logo} style={{ verticalAlign: 'initial' }} alt="logo" height={34} />
         </Link>
