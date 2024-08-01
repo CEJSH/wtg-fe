@@ -7,7 +7,7 @@ export const InfoBox = ({ title, desc }: { title: string; desc: string }) => {
   return (
     <section className="w-full flex flex-col h-full">
       <div className={boxClassName}>
-        <div className="text-[16px] font-bold leading-[20px] tracking-wide">{title}</div>
+        <div className="flex items-end text-[16px] font-bold leading-[20px] tracking-wide min-h-[40px]">{title}</div>
       </div>
       {title === '정확한 법정동을 알고싶어요' && (
         <Link target="_blank" href={'https://www.code.go.kr/stdcode/regCodeL.do'}>
