@@ -52,7 +52,7 @@ http://34.118.200.178:3000
 
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/ec08141e-9052-4fb9-9f27-5cca64cf0a19)
 
-<br/>
+
 ## [프로젝트 역할]
 - 풀스택 웹 개발, 기여도 100%
 - Nextjs, React, TS를 이용한 프론트 서버 개발 후 배포, Node기반의 NestJs를 사용하여 API 서버 개발 후 배포, MYSQL을 이용한 데이터베이스 스키마 제작
@@ -65,7 +65,7 @@ http://34.118.200.178:3000
 - 메모이제이션을 통해 API 호출 횟수를 줄이고 렌더링을 최소화시켜 LightHouse 성능 수치 91점 달성
 - tailwind-css를 사용하여 개발 생산성 증대
 
-##  ✔ 시작가이드
+## ✔ 시작 가이드
 ###  🏗️  For building and running the application you need :
 - Node.js 20.3.1
 - npm 10.1.0
