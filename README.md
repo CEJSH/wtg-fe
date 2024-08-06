@@ -42,12 +42,14 @@
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/53bd76dd-5e53-43ce-abee-c278e8d4dc3f)
 
 <br/>
-###  ✔ 사용해 보기
+
+### ✔ 사용해 보기
 <br/>
 
 http://34.118.200.178:3000
 
 <br/>
+
 ### ✔ 실행 화면
 
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/ec08141e-9052-4fb9-9f27-5cca64cf0a19)
