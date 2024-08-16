@@ -1,6 +1,6 @@
 'use client';
 
-export default function ResultInfoSection({ children }: { children: React.ReactNode }) {
+export default function ResultInfoWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className={resultInfoSectionStyle}>
       <div className={resultInfoTitleStyle}>이 지역 공사 건수(2023 ~ 2024)</div>

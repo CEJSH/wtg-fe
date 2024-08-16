@@ -1,14 +1,14 @@
 'use client';
 import ResultInfoCard from './ResultInfoCard';
-import ResultInfoSection from './ResultInfoSection';
+import ResultInfoWrapper from './ResultInfoWrapper';
 
-const ResultInfoBox = ({ data }: { data: any }) => {
+const ResultInfoSection = ({ data }: { data: any }) => {
   return (
-    <ResultInfoSection>
+    <ResultInfoWrapper>
       {data?.data.map((c: any, i: any) => {
         return <ResultInfoCard data={c} />;
       })}
-    </ResultInfoSection>
+    </ResultInfoWrapper>
   );
 };
-export default ResultInfoBox;
+export default ResultInfoSection;
