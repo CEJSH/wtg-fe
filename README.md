@@ -42,19 +42,32 @@
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/53bd76dd-5e53-43ce-abee-c278e8d4dc3f)
 
 <br/>
-###   ✔ 사용해 보기
+
+### ✔ 사용해 보기
 <br/>
 
 http://34.118.200.178:3000
 
 <br/>
-###   ✔ 실행 화면
+
+### ✔ 실행 화면
 
 ![image](https://github.com/CEJSH/WhereToGo_project/assets/95568006/ec08141e-9052-4fb9-9f27-5cca64cf0a19)
 
-<br/>
 
-##  ✔ 시작가이드
+## [프로젝트 역할]
+- 풀스택 웹 개발, 기여도 100%
+- Nextjs, React, TS를 이용한 프론트 서버 개발 후 배포, Node기반의 NestJs를 사용하여 API 서버 개발 후 배포, MYSQL을 이용한 데이터베이스 스키마 제작
+- Typescript를 도입하여 정적 타이핑 및 개발 생산성 향상
+- Nest.js 환경에서 REST API를 사용하여 백엔드 서버 구축, 데이터 베이스와 프론트로의 데이터 전송 및 가공 관리
+- Antd, tailwind-css를 사용하여 사용자 경험및 개발자 경험 향상
+- 사용자의 검색어로 쿼리하여 받아온 KAKAO MAP services libaray API를 통해 받아온 법정동 코드를 DB에 필터링한 데이터를 다시 KAKAO MAP API를 거쳐 지도에 마커 생성 
+
+## [성과]
+- 메모이제이션을 통해 API 호출 횟수를 줄이고 렌더링을 최소화시켜 LightHouse 성능 수치 91점 달성
+- tailwind-css를 사용하여 개발 생산성 증대
+
+## ✔ 시작 가이드
 ###  🏗️  For building and running the application you need :
 - Node.js 20.3.1
 - npm 10.1.0
@@ -89,10 +102,6 @@ http://34.118.200.178:3000
 
 ### ✔ DEV-Tool
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
-### 담당 업무
-
-- a to z
 
 ### 보완점
 * 시간이 지날수록 업데이트가 필요한 데이터라 db데이터를 업데이트하는 부분을 자동화 할 수 있는 부분을 설계해 볼 것.
