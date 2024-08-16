@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { AntdRegistry } from '@ant-design/nextjs-registry';
-import CommonProvider from './_common/common';
 import { Header } from '@/components/Header';
 
 export const metadata: Metadata = {
@@ -24,12 +22,11 @@ export default function RootLayout({
           type="text/javascript"
           src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0e2999319ef5bbfd3408999f8ea7bef&libraries=services"></script>
       </head>
-      <body className="flex flex-col w-full bg-white">
+      <body className={bodyStyle}>
         <Header />
-        <AntdRegistry>
-          <CommonProvider>{children}</CommonProvider>
-        </AntdRegistry>
+        {children}
       </body>
     </html>
   );
 }
+const bodyStyle = 'flex flex-col w-full bg-white';

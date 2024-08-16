@@ -12,7 +12,7 @@ const infoTitles = [
   { title: '공지사항', desc: '' },
 ];
 
-export function InfoBoxes() {
+export function InfoSection() {
   return (
     <InfoBoxesWrapper>
       {infoTitles.map(({ title, desc }) => {
