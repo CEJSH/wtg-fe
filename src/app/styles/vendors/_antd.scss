@@ -34,10 +34,6 @@
   border: none;
 }
 
-#filterDiv > .ant-input-wrapper {
-  font-size: 14px !important;
-}
-
 .ant-drawer-panel-motion-right-leave-action {
   box-shadow: none;
 }
@@ -46,10 +42,6 @@
   background-color: transparent !important;
 }
 
-.iao-textarea:focus,
-.iao-textarea:hover {
-  border-color: #009a3d !important;
-}
 .ant-drawer-wrapper-body > .ant-drawer-body {
   padding-bottom: 8px !important;
   padding-left: 16px !important;
@@ -69,20 +61,6 @@
   padding-top: 4px !important;
   padding-bottom: 4px !important;
   height: 36px !important;
-}
-
-.factng-select > .ant-select-selector,
-.factng-select > .ant-select-selector > .ant-select-selection-placeholder {
-  color: #727678 !important;
-  font-size: 18px !important;
-}
-
-.factng-select > .ant-select-item-option-content {
-  align-items: center;
-}
-
-.factng-select > .ant-select-arrow {
-  color: #009a3d !important;
 }
 
 .tb {
@@ -112,18 +90,8 @@
 
 .wtg-input > .ant-input-wrapper > input {
   font-weight: 500 !important;
+  font-size: 16px !important;
 }
-
-// .wtg-input > .ant-input-group {
-//   display: flex !important;
-//   height: 100% !important;
-//   padding-left: 28px !important;
-//   padding-right: 27px !important;
-// }
-
-// .iao-search-input > .ant-input::placeholder {
-//   color: #009a3d !important;
-// }
 
 #userPhone::placeholder,
 #userEmail::placeholder {
@@ -372,10 +340,6 @@
 #table-fixed-height div > .tbody > .td {
   font-size: 13px !important;
 }
-
-// #table-fixed-height tbody {
-//   height: calc(100vh - 300px);
-// }
 
 .iao-drawer-round > .ant-drawer-content-wrapper {
   border-top-left-radius: 8px;

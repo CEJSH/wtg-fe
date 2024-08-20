@@ -19,6 +19,7 @@ export function MainUpperSection({ children }: { children: React.ReactNode }) {
               theme={{
                 components: {
                   Input: {
+                    fontSize: 16,
                     controlHeight: 60,
                     colorBorder: '#ffffff',
                     colorPrimaryHover: '#ffffff',
