@@ -1,26 +1,20 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Logo } from '../app/theme/uiConfig';
-import { usePathname } from 'next/navigation';
+import HeaderSub from './HeaderSub';
 
 export function Header() {
-  const pathname = usePathname();
   return (
     <div className={headerStyle}>
       <div className={rowStyle}>
         <Link className={logoWrapperStyle} href={'/'}>
           <Image src={Logo} style={{ verticalAlign: 'initial' }} alt="logo" height={34} />
         </Link>
-        {pathname.includes('map') && (
-          <div className={guideRowStyle}>입력하신 법정동의 2023-2024년 착공 및 착공 예정 지역입니다</div>
-        )}
+        <HeaderSub />
       </div>
     </div>
   );
 }
-
-const guideRowStyle = 'w-full tracking-wide pr-[36px] break-keep';
 
 const logoWrapperStyle = 'flex items-center';
 
