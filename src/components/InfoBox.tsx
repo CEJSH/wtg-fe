@@ -8,7 +8,7 @@ export const InfoBox = ({ title, desc }: { title: string; desc: string }) => {
         <div className={infoTitleStyle}>{title}</div>
       </div>
       {title === '정확한 법정동을 알고싶어요' && (
-        <Link target="_blank" href={'https://www.code.go.kr/stdcode/regCodeL.do'}>
+        <Link target="_blank" rel="preconnect" href={'https://www.code.go.kr/stdcode/regCodeL.do'}>
           <Button className="mt-2">법정동 확인하기</Button>
         </Link>
       )}

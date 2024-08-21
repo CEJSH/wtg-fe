@@ -5,7 +5,7 @@ import Image from 'next/image';
 export function MainUpperSection({ children }: { children: React.ReactNode }) {
   return (
     <div className={mainUpperSectionStyle}>
-      <Image src={background} alt="bg" fill objectPosition="top" priority className={imageStyle} />
+      <Image src={background} alt="bg" fill className={imageStyle} priority />
       <div className={titleContainerStyle}>
         <div className="pt-[156px]">
           <div className={titleStyle}>{`어떤 곳을 찾고 계세요?`}</div>
@@ -38,7 +38,7 @@ export function MainUpperSection({ children }: { children: React.ReactNode }) {
 
 const mainUpperSectionStyle = 'relative h-[460px] flex flex-col items-center bg-[#f6f8f5] bg-cover';
 
-const imageStyle = 'absolute overflow-hidden object-cover';
+const imageStyle = 'absolute overflow-hidden object-cover object-top';
 
 const titleStyle = 'font-[700] h-[46px] text-[#f6f8f5] md:text-white text-[40px] tracking-[1px] mx-auto';
 

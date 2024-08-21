@@ -20,7 +20,8 @@ export default function RootLayout({
       <head>
         <script
           type="text/javascript"
-          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0e2999319ef5bbfd3408999f8ea7bef&libraries=services"></script>
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0e2999319ef5bbfd3408999f8ea7bef&libraries=services"
+          defer></script>
       </head>
       <body className={bodyStyle}>
         <Header />

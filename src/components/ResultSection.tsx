@@ -4,8 +4,8 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import MapSection from './MapSection';
 import ResultInfoBox from './ResultInfoBox';
 import GridSpinner from './ui/GridSpinner';
-import { useFetchConstructionData } from '@/service/useFetchConstructionData';
-import { useFetchPositions } from '@/service/useFetchPositions';
+import { useFetchConstructionData } from '@/hook/useFetchConstructionData';
+import { useFetchPositions } from '@/hook/useFetchPositions';
 
 const ResultSection = memo(() => {
   const searchParams = useSearchParams();
@@ -71,7 +71,7 @@ const ResultSection = memo(() => {
           image: markerImage,
           clickable: true,
         });
-
+        marker.setMap(userViewMap);
         const placeName = position.title.slice(7).replaceAll(' ', '');
         const findUrl = `https://map.kakao.com/link/search/${placeName}`;
         const bgColor = position.cDay.startsWith('2024') ? `rgb(190, 18, 60)` : `rgb(249, 115, 22)`;
@@ -80,7 +80,7 @@ const ResultSection = memo(() => {
           '<div class="customoverlay" aria-label="Open construction site details" style="padding-bottom: 1px; padding-left: 3px; padding-right: 3px; opacity: 0.7; line-height: 1.4; color: rgb(255, 255, 255); background-color: ' +
           `${bgColor};` +
           'font-size:10px; margin-right:8px; text-overflow: ellipsis;">' +
-          `  <a href=${findUrl} target="_blank">` +
+          `  <a rel="preconnect" href=${findUrl} target="_blank">` +
           `    <span class="title">${position.title.slice(7)}</span>` +
           '  </a>' +
           '</div>';
@@ -99,8 +99,6 @@ const ResultSection = memo(() => {
             customOverlay.setMap(userViewMap);
           }
         });
-
-        marker.setMap(userViewMap);
       });
     },
     [positions, markerImage],
