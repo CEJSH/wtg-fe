@@ -5,7 +5,7 @@ import Image from 'next/image';
 export function MainUpperSection({ children }: { children: React.ReactNode }) {
   return (
     <div className={mainUpperSectionStyle}>
-      <Image src={background} alt="bg" fill className={imageStyle} priority />
+      <Image src={background} alt="bg" fill className={imageStyle} priority sizes="(max-width: 768px) 100vw, 50vw" />
       <div className={titleContainerStyle}>
         <div className="pt-[156px]">
           <div className={titleStyle}>{`어떤 곳을 찾고 계세요?`}</div>
