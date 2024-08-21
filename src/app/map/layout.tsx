@@ -6,5 +6,7 @@ export const metadata: Metadata = {
 };
 
 export default function MapLayout({ children }: { children: React.ReactNode }) {
-  return <section className="w-full flex flex-col">{children}</section>;
+  return <section className={mapSectionStyle}>{children}</section>;
 }
+
+const mapSectionStyle = 'w-full flex flex-col';
