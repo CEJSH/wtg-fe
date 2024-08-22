@@ -1,5 +1,4 @@
 'use client';
-
 import { ThemeConfig } from 'antd';
 import { Noto_Sans_KR } from 'next/font/google';
 import { COLORS } from './color';

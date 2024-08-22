@@ -20,7 +20,7 @@ dayjs.tz.setDefault('Asia/Seoul');
 
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => (
   <ConfigProvider locale={locale} theme={theme}>
-    <StyleProvider hashPriority="high">{children}</StyleProvider>
+    <StyleProvider>{children}</StyleProvider>
   </ConfigProvider>
 );
 

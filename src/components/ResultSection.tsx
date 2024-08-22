@@ -75,7 +75,6 @@ const ResultSection = memo(() => {
         const placeName = position.title.slice(7).replaceAll(' ', '');
         const findUrl = `https://map.kakao.com/link/search/${placeName}`;
         const bgColor = position.cDay.startsWith('2024') ? `rgb(190, 18, 60)` : `rgb(249, 115, 22)`;
-
         const content =
           '<div class="customoverlay" aria-label="Open construction site details" style="padding-bottom: 1px; padding-left: 3px; padding-right: 3px; opacity: 0.7; line-height: 1.4; color: rgb(255, 255, 255); background-color: ' +
           `${bgColor};` +
