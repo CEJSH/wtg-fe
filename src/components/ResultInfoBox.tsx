@@ -1,4 +1,3 @@
-'use client';
 import ResultInfoCard from './ResultInfoCard';
 import ResultInfoWrapper from './ResultInfoWrapper';
 

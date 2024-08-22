@@ -1,5 +1,3 @@
-'use client';
-
 export default function ResultInfoWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className={resultInfoSectionStyle}>

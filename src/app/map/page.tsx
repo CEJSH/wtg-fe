@@ -1,8 +1,7 @@
-'use client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Suspense } from 'react';
 import GridSpinner from '@/components/ui/GridSpinner';
-import ResultSection from '../../../components/ResultSection';
+import ResultSection from '@/components/ResultSection';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

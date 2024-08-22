@@ -1,4 +1,3 @@
-import React from 'react';
 import ExtraInfo from './ExtraSection';
 
 export default function MapSection({ children }: { children: React.ReactNode }) {
