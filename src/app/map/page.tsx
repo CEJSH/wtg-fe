@@ -1,7 +1,10 @@
+'use client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Suspense } from 'react';
 import GridSpinner from '@/components/ui/GridSpinner';
 import ResultSection from '@/components/ResultSection';
+import { RecoilRoot } from 'recoil';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -14,9 +17,11 @@ const queryClient = new QueryClient({
 const MapPage = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Suspense fallback={<GridSpinner />}>
-        <ResultSection />
-      </Suspense>
+      <RecoilRoot>
+        <Suspense fallback={<GridSpinner />}>
+          <ResultSection />
+        </Suspense>
+      </RecoilRoot>
     </QueryClientProvider>
   );
 };

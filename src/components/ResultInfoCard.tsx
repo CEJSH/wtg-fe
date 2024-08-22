@@ -1,23 +1,26 @@
-export default function ResultInfoCard({ data }: { data: any }) {
-  const construction = data;
+export default function ResultInfoCard({ data: construction }: { data: any }) {
   return (
     <div className={cardWrapperStyle}>
-      <div className={archTypeStyle}>{construction.archGbCdNm || ''}</div>
-      <div className="font-[700]">{construction.bldNm.length > 1 ? construction.bldNm : construction.platPlc}</div>
-      {construction.bldNm.length > 1 && <div className={addressStyle}>{construction.platPlc}</div>}
+      <div className={archTypeStyle}>{construction?.archGbCdNm || ''}</div>
+      <div className="font-[700]">
+        {construction?.bldNm && construction?.bldNm.length > 1 ? construction.bldNm : construction?.platPlc}
+      </div>
+      {construction?.bldNm && construction?.bldNm.length > 1 && (
+        <div className={addressStyle}>{construction?.platPlc}</div>
+      )}
       <div className={stcnsDayContainerStyle}>
         <div className={stcnsDayLabelStyle}>착공일</div>
         <div>
-          {construction.realStcnsDay.slice(0, 4) +
+          {construction.realStcnsDay?.slice(0, 4) +
             '.' +
-            construction.realStcnsDay.slice(4, 6) +
+            construction.realStcnsDay?.slice(4, 6) +
             '.' +
-            construction.realStcnsDay.slice(6) ||
-            construction.stcnsSchedDay.slice(0, 4) +
+            construction.realStcnsDay?.slice(6) ||
+            construction.stcnsSchedDay?.slice(0, 4) +
               '.' +
-              construction.stcnsSchedDay.slice(4, 6) +
+              construction.stcnsSchedDay?.slice(4, 6) +
               '.' +
-              construction.stcnsSchedDay.slice(6)}
+              construction.stcnsSchedDay?.slice(6)}
         </div>
       </div>
     </div>

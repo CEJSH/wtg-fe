@@ -6,10 +6,13 @@ import ResultInfoBox from './ResultInfoBox';
 import GridSpinner from './ui/GridSpinner';
 import { useFetchConstructionData } from '@/hook/useFetchConstructionData';
 import { useFetchPositions } from '@/hook/useFetchPositions';
+import { useRecoilState } from 'recoil';
+import { bCodeState } from '@/state/bCodeState';
 
 const ResultSection = memo(() => {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const [address, setAddress] = useRecoilState(bCodeState);
   const lat = searchParams.get('latitude');
   const long = searchParams.get('longitude');
   const b_code = searchParams.get('b_code');
@@ -30,7 +33,7 @@ const ResultSection = memo(() => {
       }
     }
   }, [data, isLoading, error, fetchPositions, router]);
-
+  setAddress(b_code ? b_code : '');
   useEffect(() => {
     fetchPositionsMemoized();
   }, [fetchPositionsMemoized]);
@@ -124,7 +127,7 @@ const ResultSection = memo(() => {
       ) : (
         <>
           <section ref={mapContainerRef} className="w-full h-[100%]" />
-          <ResultInfoBox data={data} />
+          <ResultInfoBox />
         </>
       )}
     </MapSection>
