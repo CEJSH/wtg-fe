@@ -1,7 +1,7 @@
 /** global kakao */
 'use client';
 import { useState, memo } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import MapSection from './MapSection';
 import ResultInfoBox from './ResultInfoBox';
 import { useFetchConstructionData } from '@/hook/useFetchConstructionData';
@@ -9,7 +9,6 @@ import { useRecoilState } from 'recoil';
 import { bCodeState } from '@/states/bCodeState';
 import Script from 'next/script';
 import Markers from './Markers';
-import { useFetchPositions } from '@/hook/useFetchPositions';
 
 const ResultSection = memo(() => {
   const searchParams = useSearchParams();
@@ -29,7 +28,7 @@ const ResultSection = memo(() => {
       const mapContainer = document.getElementById('map');
       const mapOption = {
         center: new window.kakao.maps.LatLng(Number(lat), Number(long)),
-        level: 4,
+        level: 5,
       };
       const map = new window.kakao.maps.Map(mapContainer, mapOption);
       setMap(map);
