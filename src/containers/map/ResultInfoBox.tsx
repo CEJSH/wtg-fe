@@ -1,8 +1,8 @@
 import { useFetchConstructionData } from '@/hook/useFetchConstructionData';
-import ResultInfoCard from './ResultInfoCard';
+import ResultInfoCard from '../../components/card/ResultInfoCard';
 import ResultInfoWrapper from './ResultInfoWrapper';
 import { useRecoilValue } from 'recoil';
-import { bCodeState } from '@/state/bCodeState';
+import { bCodeState } from '@/states/bCodeState';
 
 const ResultInfoSection = () => {
   const BaseURL = process.env.NEXT_PUBLIC_BASE_SERVER_URL || 'http://localhost:8000';

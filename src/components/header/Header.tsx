@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Logo } from '../app/theme/uiConfig';
+import { Logo } from '../../app/theme/uiConfig';
 import HeaderSub from './HeaderSub';
 
 export function Header() {

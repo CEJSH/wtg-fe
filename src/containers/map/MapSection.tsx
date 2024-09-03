@@ -1,4 +1,4 @@
-import ExtraInfo from './ExtraSection';
+import ExtraInfo from '../../components/ExtraSection';
 
 export default function MapSection({ children }: { children: React.ReactNode }) {
   return (

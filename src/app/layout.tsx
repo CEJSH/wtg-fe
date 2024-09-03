@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { Header } from '@/components/Header';
+import { Header } from '@/components/header/Header';
 
 export const metadata: Metadata = {
   title: { default: 'WTG', template: 'wtg | %s' },
@@ -18,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        <link rel="preload" href="/city_image.jpg" as="image" />
+        {/* <script
           type="text/javascript"
-          src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=f0e2999319ef5bbfd3408999f8ea7bef&libraries=services"></script>
+          src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=f0e2999319ef5bbfd3408999f8ea7bef&libraries=services"></script> */}
       </head>
       <body className={bodyStyle}>
         <Header />

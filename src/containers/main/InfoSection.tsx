@@ -1,4 +1,4 @@
-import { InfoBox } from './InfoBox';
+import { InfoCard } from '../../components/card/InfoCard';
 import InfoBoxesWrapper from './InfoBoxesWrapper';
 const infoTitles = [
   {
@@ -16,7 +16,7 @@ export function InfoSection() {
   return (
     <InfoBoxesWrapper>
       {infoTitles.map(({ title, desc }) => {
-        return <InfoBox key={`title-${title}`} title={title} desc={desc} />;
+        return <InfoCard key={`title-${title}`} title={title} desc={desc} />;
       })}
     </InfoBoxesWrapper>
   );

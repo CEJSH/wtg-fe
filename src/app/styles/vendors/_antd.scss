@@ -1,22 +1,8 @@
 @import '~antd/dist/reset.css';
 @import '../base/_color.scss';
 
-.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper {
-  box-shadow: none;
-}
-
-.ant-drawer-panel-motion-right-leave-action {
-  box-shadow: none;
-}
-
 .ant-layout-header > .ant-btn-text:hover {
   background-color: transparent !important;
-}
-
-.ant-drawer-wrapper-body > .ant-drawer-body {
-  padding-bottom: 8px !important;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
 }
 
 .ant-input:focus,
@@ -27,11 +13,6 @@
 .wtg-input > .ant-input-wrapper > input {
   font-weight: 500 !important;
   font-size: 16px !important;
-}
-
-#userPhone::placeholder,
-#userEmail::placeholder {
-  color: #2b2d2f !important;
 }
 
 .ant-input-outlined:focus,

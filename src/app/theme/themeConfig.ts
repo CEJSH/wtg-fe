@@ -32,11 +32,16 @@ const theme: ThemeConfig = {
       handleVisible: undefined,
     },
     Input: {
+      fontSize: 16,
+      controlHeight: 60,
+      colorBorder: '#ffffff',
+      colorPrimaryHover: '#ffffff',
+      paddingInline: 28,
       controlHeightLG: 80,
       borderRadiusLG: 20,
       fontSizeLG: 25,
-      fontSize: 16,
     },
+
     Radio: {
       colorWhite: COLORS.primary,
       colorPrimary: '#F2F4F4',

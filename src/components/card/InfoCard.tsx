@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 import Link from 'next/link';
 
-export const InfoBox = ({ title, desc }: { title: string; desc: string }) => {
+export const InfoCard = ({ title, desc }: { title: string; desc: string }) => {
   return (
     <section className={boxStyle}>
       <div className={infoTitleRowStyle}>

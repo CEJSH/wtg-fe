@@ -2,8 +2,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Suspense } from 'react';
 import GridSpinner from '@/components/ui/GridSpinner';
-import ResultSection from '@/components/ResultSection';
 import { RecoilRoot } from 'recoil';
+import ResultSection from '@/containers/map/ResultSection';
 
 const queryClient = new QueryClient({
   defaultOptions: {
